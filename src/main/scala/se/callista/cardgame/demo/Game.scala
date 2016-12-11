@@ -7,7 +7,7 @@ case class Card(number: Integer, color: String) {
 case class Deck(cards: List[Card]) {
   def getTopCard: Card = cards.head
 
-  def canStack(other: Deck): Boolean = this.getTopCard.canStackCard(other.getTopCard)
+  def canStack(other: Deck): Boolean = getTopCard.canStackCard(other.getTopCard)
 }
 
 object Deck {
