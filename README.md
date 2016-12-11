@@ -1,2 +1,2 @@
 # card-game
-Just a very simple Card Game.
+Just a very simple card game.
