@@ -25,10 +25,12 @@ class Game {
 
   import scala.annotation.tailrec
 
+  def run(): Int = start()
+
   @tailrec
-  private def start(tries: Int = 0): Unit =
+  private def start(tries: Int = 0): Int =
     round(Deck.newShuffled) match {
-      case _ :: Nil => println("Succeeded after " + tries + " tries!")
+      case _ :: Nil => println("Succeeded after " + tries + " tries!"); tries
       case _ => start(tries + 1)
     }
 
@@ -54,8 +56,4 @@ class Game {
       case _ => stacks
     }
   }
-}
-
-object Game {
-  def main(args: Array[String]): Unit = new Game().start()
 }
